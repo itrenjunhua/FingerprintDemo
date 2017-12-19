@@ -12,10 +12,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.renj.fingerprint.fingerprint.FingerprintManagerUtil;
+
+/**
+ * 指纹验证示例
+ */
 @RequiresApi(api = Build.VERSION_CODES.M)
 public class MainActivity extends AppCompatActivity {
-
-
     private Button startVerification;
 
     @Override
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AlertDialog alertDialog;
 
+    // 调用指纹验证方法
     private void startVerification() {
         FingerprintManagerUtil.startFingerprinterVerification(this, new FingerprintManagerUtil.FingerprintManagerListener() {
 
